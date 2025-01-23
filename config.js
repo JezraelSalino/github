@@ -1,1 +1,2 @@
-console.log('config.js loaded');
+console.log('Hello World');
+console.log('Hello Worlds');
