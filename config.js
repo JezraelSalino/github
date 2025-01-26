@@ -1,2 +1,3 @@
 console.log('Hello Admin');
 console.log('Bug fixed');
+console.log('Second Feature!');
