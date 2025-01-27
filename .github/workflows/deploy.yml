@@ -1,0 +1,25 @@
+name: Deploy to Local Machine
+
+on:
+  push:
+    branches:
+      - main  # Trigger this action on push to the 'main' branch
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest  # You can use any runner, but 'ubuntu-latest' is a good choice
+
+    steps:
+      - name: Checkout the code
+        uses: actions/checkout@v2  # Checkout the repository
+
+      - name: Set up SSH for local machine
+        uses: appleboy/ssh-action@v0.1.5  # Use the latest version of the SSH action
+        with:
+          host: 127.0.0.1  # Use localhost (this is your local machine)
+          username: ${{ secrets.USERNAME }}  # Add your local username as a secret
+          key: ${{ secrets.STAGING_SERVER_SSH_KEY }}  # The SSH key added as a secret
+
+      - name: Pull latest code on local machine
+        run: |
+          ssh -o StrictHostKeyChecking=no ${{ secrets.USERNAME }}@127.0.0.1 'cd /c/xampp/htdocs/test/github && git pull origin main'  # Adjust path for Windows compatibility
