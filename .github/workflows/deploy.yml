@@ -3,23 +3,22 @@ name: Deploy to Local Machine
 on:
   push:
     branches:
-      - main  # Trigger this action on push to the 'main' branch
+      - main  # Trigger on push to 'main' branch
 
 jobs:
   deploy:
-    runs-on: ubuntu-latest  # You can use any runner, but 'ubuntu-latest' is a good choice
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout the code
-        uses: actions/checkout@v2  # Checkout the repository
+        uses: actions/checkout@v2
 
-      - name: Set up SSH for local machine
-        uses: appleboy/ssh-action@v0.1.5  # Use the latest version of the SSH action
+      - name: Set up SSH and deploy
+        uses: appleboy/ssh-action@v0.1.5
         with:
-          host: 127.0.0.1  # Use localhost (this is your local machine)
-          username: ${{ secrets.USERNAME }}  # Add your local username as a secret
-          key: ${{ secrets.STAGING_SERVER_SSH_KEY }}  # The SSH key added as a secret
-
-      - name: Pull latest code on local machine
-        run: |
-          ssh -o StrictHostKeyChecking=no ${{ secrets.USERNAME }}@127.0.0.1 'cd /c/xampp/htdocs/test/github && git pull origin main'  # Adjust path for Windows compatibility
+          host: 127.0.0.1
+          username: ${{ secrets.USERNAME }}  # Store your Windows username as a GitHub Secret
+          key: ${{ secrets.STAGING_SERVER_SSH_KEY }}  # The SSH private key
+          script: |
+            cd /c/xampp/htdocs/test/github
+            git pull origin main
