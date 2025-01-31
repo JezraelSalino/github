@@ -16,7 +16,7 @@ jobs:
       - name: Set up SSH for local machine
         uses: appleboy/ssh-action@v0.1.5  # Use the latest version of the SSH action
         with:
-          host: f4c4625b3c6126.lhr.life  # Use the public URL from localhost.run
+          host: cc684f44cff13f.lhr.life  # Use the public URL from localhost.run
           username: ${{ secrets.USERNAME }}  # Add your local username as a secret
           key: ${{ secrets.STAGING_SERVER_SSH_KEY }}  # The SSH key added as a secret
           port: 22  # SSH port (default is 22)
