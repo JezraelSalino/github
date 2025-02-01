@@ -1,26 +1,24 @@
-name: Deploy to Local Machine
+name: Deploy to Staging
 
 on:
   push:
     branches:
-      - main  # Trigger this action on push to the 'main' branch
+      - main
 
 jobs:
   deploy:
-    runs-on: ubuntu-latest  # You can use any runner, but 'ubuntu-latest' is a good choice
+    runs-on: self-hosted
 
     steps:
-      - name: Checkout the code
-        uses: actions/checkout@v2  # Checkout the repository
+      - name: Checkout Repository
+        uses: actions/checkout@v3  # Use the latest version of the checkout action
 
-      - name: Set up SSH for local machine
-        uses: appleboy/ssh-action@v0.1.5  # Use the latest version of the SSH action
-        with:
-          host: ff098ddfaf33e6.lhr.life  # Use the public URL from localhost.run
-          username: ${{ secrets.USERNAME }}  # Add your local username as a secret
-          key: ${{ secrets.STAGING_SERVER_SSH_KEY }}  # The SSH key added as a secret
-          port: 22  # SSH port (default is 22)
-
-      - name: Pull latest code on local machine
+      - name: Deploy Application
         run: |
-          ssh -o StrictHostKeyChecking=no ${{ secrets.USERNAME }}@f4c4625b3c6126.lhr.life 'cd /c/xampp/htdocs/test/github && git pull origin main'  # Adjust path for Windows compatibility
+          # Change to the directory where your project is located
+          cd C:/xampp/htdocs/test/github  # Make sure the path is correct
+
+          # Pull the latest updates from the repository
+          git pull origin main
+
+          # Add additional deployment steps here (e.g., build, restart services)
