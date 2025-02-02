@@ -19,6 +19,6 @@ jobs:
           cd C:/xampp/htdocs/prod/github  # Make sure the path is correct
 
           # Pull the latest updates from the repository
-          git pull origin staging
+          git pull origin main
 
           # Add additional deployment steps here (e.g., build, restart services)
