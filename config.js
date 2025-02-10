@@ -7,3 +7,4 @@ console.log('Update 2');
 console.log('Update 3');
 console.log('Update 4');
 console.log('Updates 5');
+console.log('Updates 6');
