@@ -7,22 +7,25 @@ on:
 
 jobs:
   deploy:
-    runs-on: self-hosted
+    runs-on: windows-latest
 
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v3  # Use the latest version of the checkout action
+    - name: Check out repository
+      uses: actions/checkout@v2
 
-      - name: Deploy Application
-        run: |
-          cd C:/xampp/htdocs/test/github # Project path
+    - name: Set up Git
+      run: |
+        git config --global user.email "jezraelsalino@gmail.com"
+        git config --global user.name "JezraelSalino"
 
-          git config --global user.email "jezraelsalino@gmail.com"
-          git config --global user.name "JezraelSalino"
+    - name: Install GitHub CLI
+      run: |
+        choco install gh
+        refreshenv
 
-          gh pr create --base main --head staging --title "New Pull Request Title" --body "There are new updaates from staging branch"
+    - name: Create Pull Request
+      run: |
+        gh pr create --base main --head staging --title "New Pull Request Title" --body "There are new updates from staging branch"
 
-          # Pull the latest updates from the repository
-          git pull origin staging
-
-          # Add additional deployment steps here (e.g., build, restart services)
+    - name: Pull latest updates
+      run: git pull origin staging
