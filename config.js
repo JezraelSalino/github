@@ -6,3 +6,4 @@ console.log('Latest Updates');
 console.log('Update 2');
 console.log('Update 3');
 console.log('Update 4');
+console.log('Update 5');
