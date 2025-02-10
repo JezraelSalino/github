@@ -15,8 +15,8 @@ jobs:
 
     - name: Set up Git
       run: |
-        git config --global user.email "jezraelsalino@gmail.com"
-        git config --global user.name "JezraelSalino"
+         cd C:/xampp/htdocs/test/github
 
-    - name: Pull latest updates
-      run: git pull origin staging
+        git pull origin staging
+
+      # Add additional deployment steps here (e.g., build, restart services)
