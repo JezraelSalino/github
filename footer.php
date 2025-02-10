@@ -1,4 +1,5 @@
-<footer class="bg-gray-200 py-8">
+</main>
+<footer class="bg-gray-200 py-8 mt-auto">
   <div class="container mx-auto flex flex-wrap justify-between items-center">
     <div class="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 mb-4 md:mb-0">
       <h5 class="text-lg font-bold text-gray-600">About Us</h5>
