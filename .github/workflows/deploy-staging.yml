@@ -1,4 +1,4 @@
-name: Deploy to Staging
+name: Deploy to Production
 
 on:
   push:
@@ -7,25 +7,20 @@ on:
 
 jobs:
   deploy:
-    runs-on: windows-latest
+    runs-on: self-hosted
 
     steps:
-    - name: Check out repository
-      uses: actions/checkout@v2
+      - name: Checkout Repository
+        uses: actions/checkout@v3  # Use the latest version of the checkout action
 
-    - name: Set up Git
-      run: |
-        git config --global user.email "jezraelsalino@gmail.com"
-        git config --global user.name "JezraelSalino"
+      - name: Deploy Application
+        run: |
+          cd C:/xampp/htdocs/test/github  # Project path
 
-    - name: Install GitHub CLI
-      run: |
-        choco install gh
-        refreshenv
+          git config --global user.email "jezraelsalino@gmail.com"
+          git config --global user.name "JezraelSalino"
 
-    - name: Create Pull Request
-      run: |
-        gh pr create --base main --head staging --title "New Pull Request Title" --body "There are new updates from staging branch"
+          # Pull the latest updates from the repository for example
+          git pull origin staging
 
-    - name: Pull latest updates
-      run: git pull origin staging
+          # Add additional deployment steps here (e.g., build, restart services)
