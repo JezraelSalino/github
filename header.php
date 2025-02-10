@@ -8,7 +8,7 @@
   <body class="flex flex-col h-screen">
   <nav class="bg-gray-800 py-4 md:py-6 lg:py-8">
       <div class="container mx-auto flex justify-between items-center">
-        <a href="index.php" class="text-lg font-bold text-white">Logo</a>
+        <a href="index.php" class="text-lg font-bold text-white">Vergola</a>
         <ul class="hidden md:flex items-center space-x-4">
           <li><a href="index.php" class="text-gray-300 hover:text-white">Home</a></li>
           <li><a href="about.php" class="text-gray-300 hover:text-white">About</a></li>
