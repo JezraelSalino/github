@@ -7,7 +7,7 @@ on:
 
 jobs:
   deploy:
-    runs-on: staging-runner, self-hosted
+    runs-on: self-hosted
 
     steps:
       - name: Checkout Repository
@@ -15,10 +15,12 @@ jobs:
 
       - name: Deploy Application
         run: |
-          # Change to the directory where your project is located
-          cd C:/xampp/htdocs/prod/github  # Make sure the path is correct
+          cd C:/xampp/htdocs/prod/github  # Project path
 
-          # Pull the latest updates from the repository
+          git config --global user.email "jezraelsalino@gmail.com"
+          git config --global user.name "JezraelSalino"
+
+          # Pull the latest updates from the repository for example
           git pull origin main
 
           # Add additional deployment steps here (e.g., build, restart services)
