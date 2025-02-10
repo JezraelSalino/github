@@ -23,6 +23,6 @@ jobs:
           # Pull the latest updates from the repository
           git pull origin staging
 
-         # gh pr create --base main --head staging --title "New Pull Request Title" --body "There are new updaates from staging branch"
+          gh pr create --base main --head staging --title "New Pull Request Title" --body "There are new updaates from staging branch"
 
           # Add additional deployment steps here (e.g., build, restart services)
