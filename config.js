@@ -1,10 +1,1 @@
-console.log('Hello Admin');
-console.log('Hello Users');
-console.log('Hello Users');
-console.log('New Updates');
-console.log('Latest Updates');
-console.log('Update 2');
-console.log('Update 3');
-console.log('Update 4');
-console.log('Updates 5');
-console.log('Updates 6');
+console.log('Push 1');
