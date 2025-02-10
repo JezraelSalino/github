@@ -18,14 +18,5 @@ jobs:
         git config --global user.email "jezraelsalino@gmail.com"
         git config --global user.name "JezraelSalino"
 
-    - name: Install GitHub CLI
-      run: |
-        choco install gh
-        refreshenv
-
-    - name: Create Pull Request
-      run: |
-        gh pr create --base main --head staging --title "New Pull Request Title" --body "There are new updates from staging branch"
-
     - name: Pull latest updates
       run: git pull origin staging
