@@ -7,7 +7,7 @@ on:
 
 jobs:
   deploy:
-    runs-on: staging-runner, self-hosted
+    runs-on: self-hosted
 
     steps:
       - name: Checkout Repository
