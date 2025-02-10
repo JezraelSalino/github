@@ -18,6 +18,7 @@
         <li class="mb-2"><a href="#" class="text-gray-600 hover:text-gray-900">Facebook</a></li>
         <li class="mb-2"><a href="#" class="text-gray-600 hover:text-gray-900">Twitter</a></li>
         <li class="mb-2"><a href="#" class="text-gray-600 hover:text-gray-900">Instagram</a></li>
+        <li class="mb-2"><a href="#" class="text-gray-600 hover:text-gray-900">Youtube</a></li>
       </ul>
     </div>
     <div class="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 mb-4 md:mb-0">
