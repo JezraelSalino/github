@@ -18,6 +18,9 @@ jobs:
           # Change to the directory where your project is located
           cd C:/xampp/htdocs/test/github  # Make sure the path is correct
 
+          git config --global user.email "jezraelsalino@gmail.com"
+          git config --global user.name "JezraelSalino"
+
           # Pull the latest updates from the repository
           git pull origin staging
 
