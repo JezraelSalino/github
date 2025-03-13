@@ -7,7 +7,7 @@ on:
 
 jobs:
   deploy:
-    runs-on: [self-hosted, runner-5]
+    runs-on: [self-hosted, vm-machine]
 
     steps:
       - name: Checkout Repository
