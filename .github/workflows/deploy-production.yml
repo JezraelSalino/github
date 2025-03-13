@@ -15,7 +15,7 @@ jobs:
 
       - name: Deploy Application
         run: |
-          cd C:/Projects/github  # Project path
+          cd C:/Users/Jezmahboi/Projects/github  # Project path
 
           git config --global user.email "jezraelsalino@gmail.com"
           git config --global user.name "JezraelSalino"
