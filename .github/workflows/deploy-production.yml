@@ -11,7 +11,7 @@ jobs:
 
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v3  # Use the latest version of the checkout action
+        uses: actions/checkout@v2  # Use the latest version of the checkout action
 
       - name: Deploy Application
         run: |
