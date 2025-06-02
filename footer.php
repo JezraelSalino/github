@@ -24,7 +24,7 @@
     </div>
     <div class="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 mb-4 md:mb-0">
       <h5 class="text-lg font-bold text-gray-600">Newsletter</h5>
-      <p class="text-gray-600">Sign up for our newsletter to stay up to date with the latest news and updatesssss.</p>
+      <p class="text-gray-600">Sign up for our newsletter to stay up to date with the latest news and updates.</p>
       <form>
         <input type="email" class="w-full py-2 pl-10 text-sm text-gray-700" placeholder="Enter your email address">
         <button class="bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded">Subscribe</button>
