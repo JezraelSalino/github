@@ -7,20 +7,17 @@ on:
 
 jobs:
   deploy:
-    runs-on: self-hosted
+    runs-on: [self-hosted, vm-machine]
 
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v3  # Use the latest version of the checkout action
-
-      - name: Deploy Application
+      - name: Configure Git
         run: |
-          cd C:/xampp/htdocs/prod/github  # Project path
-
           git config --global user.email "jezraelsalino@gmail.com"
           git config --global user.name "JezraelSalino"
 
-          # Pull the latest updates from the repository for example
+      - name: Pull Latest Changes
+        run: |
+          cd C:/Users/Jezmahboi/Projects/github  # Ensure this is the correct project path
           git pull origin main
 
-          # Add additional deployment steps here (e.g., build, restart services)
+      # Add additional deployment steps if needed
