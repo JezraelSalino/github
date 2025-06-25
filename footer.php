@@ -8,7 +8,7 @@
     <div class="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 mb-4 md:mb-0">
       <h5 class="text-lg font-bold text-gray-600">Quick Links</h5>
       <ul class="list-none mb-0">
-        <li class="mb-2"><a href="#" class="text-gray-600 hover:text-gray-900">Home</a></li>
+        <li class="mb-2"><a href="#" class="text-gray-600 hover:text-gray-900">Homes</a></li>
         <li class="mb-2"><a href="#" class="text-gray-600 hover:text-gray-900">About</a></li>
         <li class="mb-2"><a href="#" class="text-gray-600 hover:text-gray-900">Contact</a></li>
       </ul>
