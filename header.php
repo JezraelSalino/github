@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <title>Vergola</title>
   </head>
   <body class="flex flex-col h-screen">
   <nav class="bg-gray-800 py-4 md:py-6 lg:py-8">
