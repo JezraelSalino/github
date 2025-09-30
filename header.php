@@ -14,7 +14,7 @@
           <li><a href="index.php" class="text-gray-300 hover:text-white">Home</a></li>
           <li><a href="about.php" class="text-gray-300 hover:text-white">About</a></li>
           <li><a href="contact.php" class="text-gray-300 hover:text-white">Contact</a></li>
-          <li><a href="gallery.php" class="text-gray-300 hover:text-white">GallerSSSSy</a></li>
+          <li><a href="gallery.php" class="text-gray-300 hover:text-white">Gallery</a></li>
         </ul>
       </div>
   </nav>
